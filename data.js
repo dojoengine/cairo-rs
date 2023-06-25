@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1687490515613,
+  "lastUpdate": 1687706026156,
   "repoUrl": "https://github.com/dojoengine/cairo-rs",
   "entries": {
     "Benchmark": [
@@ -106156,6 +106156,102 @@ window.BENCHMARK_DATA = {
             "name": "parse program",
             "value": 20721697,
             "range": "± 1695662",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ammr.arf@gmail.com",
+            "name": "Kariy",
+            "username": "kariy"
+          },
+          "committer": {
+            "email": "tarrence@vanas.family",
+            "name": "Tarrence van As",
+            "username": "tarrencev"
+          },
+          "distinct": true,
+          "id": "d5f599c58f80674d8670a035b6a8fabf51414c98",
+          "message": "make `ProgramJson` serializable",
+          "timestamp": "2023-06-25T11:02:58-04:00",
+          "tree_id": "4f77886fcbf8ab0c49b4c1e140206cd44a2538b0",
+          "url": "https://github.com/dojoengine/cairo-rs/commit/d5f599c58f80674d8670a035b6a8fabf51414c98"
+        },
+        "date": 1687706020267,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "add_u64_with_felt/0",
+            "value": 1,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/1",
+            "value": 3,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/2",
+            "value": 3,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/3",
+            "value": 2,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/4",
+            "value": 2,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/5",
+            "value": 2,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/6",
+            "value": 4,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/7",
+            "value": 4,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "add_u64_with_felt/8",
+            "value": 3,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "build runner",
+            "value": 1423,
+            "range": "± 1",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "initialize",
+            "value": 46678,
+            "range": "± 438",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "parse program",
+            "value": 20166915,
+            "range": "± 85594",
             "unit": "ns/iter"
           }
         ]
