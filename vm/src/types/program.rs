@@ -41,24 +41,24 @@ use std::path::Path;
 // failures.
 // Fields in `Program` (other than `SharedProgramData` itself) are used by the main logic.
 #[derive(Clone, Default, Debug, PartialEq, Eq)]
-pub(crate) struct SharedProgramData {
-    pub(crate) data: Vec<MaybeRelocatable>,
-    pub(crate) hints: HashMap<usize, Vec<HintParams>>,
-    pub(crate) main: Option<usize>,
+pub struct SharedProgramData {
+    pub data: Vec<MaybeRelocatable>,
+    pub hints: HashMap<usize, Vec<HintParams>>,
+    pub main: Option<usize>,
     //start and end labels will only be used in proof-mode
-    pub(crate) start: Option<usize>,
-    pub(crate) end: Option<usize>,
-    pub(crate) error_message_attributes: Vec<Attribute>,
-    pub(crate) instruction_locations: Option<HashMap<usize, InstructionLocation>>,
-    pub(crate) identifiers: HashMap<String, Identifier>,
-    pub(crate) reference_manager: Vec<HintReference>,
+    pub start: Option<usize>,
+    pub end: Option<usize>,
+    pub error_message_attributes: Vec<Attribute>,
+    pub instruction_locations: Option<HashMap<usize, InstructionLocation>>,
+    pub identifiers: HashMap<String, Identifier>,
+    pub reference_manager: Vec<HintReference>,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct Program {
-    pub(crate) shared_program_data: Arc<SharedProgramData>,
-    pub(crate) constants: HashMap<String, Felt252>,
-    pub(crate) builtins: Vec<BuiltinName>,
+    pub shared_program_data: Arc<SharedProgramData>,
+    pub constants: HashMap<String, Felt252>,
+    pub builtins: Vec<BuiltinName>,
 }
 
 impl Program {
