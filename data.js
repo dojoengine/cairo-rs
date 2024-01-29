@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1698054552746,
+  "lastUpdate": 1706512743096,
   "repoUrl": "https://github.com/dojoengine/cairo-rs",
   "entries": {
     "Benchmark": [
@@ -106822,6 +106822,42 @@ window.BENCHMARK_DATA = {
             "name": "parse program",
             "value": 18722962,
             "range": "± 439189",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "mario.rugiero@lambdaclass.com",
+            "name": "Mario Rugiero",
+            "username": "Oppen"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0ea638f1227dccad33a73330cd070d4d68841ff7",
+          "message": "perf: use VirtualMachine::load_data at initialization (#1441)\n\nCo-authored-by: fmoletta <99273364+fmoletta@users.noreply.github.com>",
+          "timestamp": "2024-01-26T20:02:44Z",
+          "tree_id": "8c80cdbb55bbf3aa63579eae71b5b6054786aca7",
+          "url": "https://github.com/dojoengine/cairo-rs/commit/0ea638f1227dccad33a73330cd070d4d68841ff7"
+        },
+        "date": 1706512738595,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "initialize",
+            "value": 20813,
+            "range": "± 74",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "parse program",
+            "value": 12405455,
+            "range": "± 106793",
             "unit": "ns/iter"
           }
         ]
