@@ -31,7 +31,10 @@ use crate::{
 use felt::{Felt252, PRIME_STR};
 use num_traits::float::FloatCore;
 use num_traits::{Num, Pow};
-use serde::{de, de::MapAccess, de::SeqAccess, Deserialize, Deserializer, Serialize};
+use serde::{
+    de::{self, MapAccess, SeqAccess},
+    Deserialize, Deserializer, Serialize, Serializer,
+};
 use serde_json::Number;
 
 #[cfg(all(feature = "arbitrary", feature = "std"))]
@@ -410,6 +413,22 @@ impl<'de> de::Visitor<'de> for ValueAddressVisitor {
 
 pub fn deserialize_felt_hex<'de, D: Deserializer<'de>>(d: D) -> Result<Felt252, D::Error> {
     d.deserialize_str(Felt252Visitor)
+}
+
+pub fn serialize_program_data<S: Serializer>(
+    v: &[MaybeRelocatable],
+    serializer: S,
+) -> Result<S::Ok, S::Error> {
+    let v = v
+        .iter()
+        .map(|val| match val {
+            MaybeRelocatable::Int(value) => Ok(format!("0x{:x}", value.to_biguint())),
+            MaybeRelocatable::RelocatableValue(_) => Err(serde::ser::Error::custom(
+                "RelocatableValue serialization not supported",
+            )),
+        })
+        .collect::<Result<Vec<String>, S::Error>>()?;
+    v.serialize(serializer)
 }
 
 pub fn deserialize_array_of_bigint_hex<'de, D: Deserializer<'de>>(
