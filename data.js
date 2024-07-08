@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1706512743096,
+  "lastUpdate": 1720463713992,
   "repoUrl": "https://github.com/dojoengine/cairo-rs",
   "entries": {
     "Benchmark": [
@@ -106858,6 +106858,42 @@ window.BENCHMARK_DATA = {
             "name": "parse program",
             "value": 12405455,
             "range": "± 106793",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "fontana.pedro93@gmail.com",
+            "name": "Pedro Fontana",
+            "username": "pefontana"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bb491f2a9ea0514bbeba92d858b28baaf41053e7",
+          "message": "release v1.0.0-rc4 (#1803)\n\nCo-authored-by: Pedro Fontana <peter@Pedros-MacBook-Pro.local>",
+          "timestamp": "2024-07-05T18:57:16Z",
+          "tree_id": "8bfb43f1aa802ddb40a24b801d83a159a6d8c007",
+          "url": "https://github.com/dojoengine/cairo-rs/commit/bb491f2a9ea0514bbeba92d858b28baaf41053e7"
+        },
+        "date": 1720463710095,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "initialize",
+            "value": 14520,
+            "range": "± 114",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "parse program",
+            "value": 13313575,
+            "range": "± 424141",
             "unit": "ns/iter"
           }
         ]
